@@ -11,6 +11,7 @@ from vertexai.generative_models import GenerativeModel, GenerationConfig
 def parse_args():
     parser = argparse.ArgumentParser(description="🧠 memex: The Obsidian Vault Synthesizer")
     parser.add_argument("--dir", type=str, required=True, help="Directory to watch and index")
+    parser.add_argument("--model", type=str, default=None, help="Vertex AI model name (Default: env VERTEX_MODEL_NAME or gemini-3.1-pro-preview)")
     return parser.parse_args()
 
 class MarkdownHandler(FileSystemEventHandler):
@@ -112,7 +113,9 @@ def main():
     print("Initializing Vertex AI Gemini...")
     project = os.environ.get("GOOGLE_VERTEX_PROJECT", "extreme-karma-gm")
     vertexai.init(project=project, location="global")
-    model = GenerativeModel('gemini-3.1-pro-preview')
+    
+    selected_model = args.model or os.environ.get("VERTEX_MODEL_NAME", "gemini-3.1-pro-preview")
+    model = GenerativeModel(selected_model)
 
     event_handler = MarkdownHandler(collection, model)
     observer = Observer()
