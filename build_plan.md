@@ -1,4 +1,4 @@
-# Build Plan: fde-intel
+# Build Plan: memex
 
 ## Step 1: Directory Watcher
 *   Implement `watchdog` in Python to monitor a specified directory for file creation and modification events.

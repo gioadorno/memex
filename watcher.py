@@ -9,7 +9,7 @@ import vertexai
 from vertexai.generative_models import GenerativeModel, GenerationConfig
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="🧠 fde-intel: The Obsidian Vault Synthesizer")
+    parser = argparse.ArgumentParser(description="🧠 memex: The Obsidian Vault Synthesizer")
     parser.add_argument("--dir", type=str, required=True, help="Directory to watch and index")
     return parser.parse_args()
 

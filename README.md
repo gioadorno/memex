@@ -1,9 +1,9 @@
-# fde-intel 🧠
+# memex 🧠
 
 **The Obsidian Vault Synthesizer & Local Vector DB**
 
 ## Overview
-Forward Deployed Engineers are constantly in meetings, gathering chaotic requirements. `fde-intel` is a background daemon that turns a messy folder of Markdown notes (like an Obsidian vault) into a queryable, self-organizing "second brain."
+Forward Deployed Engineers are constantly in meetings, gathering chaotic requirements. `memex` is a background daemon that turns a messy folder of Markdown notes (like an Obsidian vault) into a queryable, self-organizing "second brain."
 
 ## Features
 *   **Directory Watching:** Automatically detects new or modified `.md` files in real-time.
