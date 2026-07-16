@@ -1,5 +1,8 @@
 # memex 🧠
 
+> 📖 **Real-World Usage:** Check out [EXAMPLES.md](EXAMPLES.md) for practical FDE workflows and terminal outputs.
+
+
 **The Obsidian Vault Synthesizer & Local Vector DB**
 
 ## Overview
